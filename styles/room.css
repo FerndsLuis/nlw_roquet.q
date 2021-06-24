@@ -87,3 +87,64 @@
   padding: 0.8rem 2.4rem;
   line-height: 2.4rem;
 }
+
+/* Questions Wrapper */
+
+.questions .question-wrapper {
+  background: var(--light-blue);
+  margin-bottom: 8px;
+  border-radius: 0 0.8rem 0.8rem 0 0.8rem;
+
+  padding: 2.4rem;
+}
+
+.questions .question-wrapper .question-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.questions .question-wrapper .question-content .user {
+  background: var(--blue);
+  clip-path: circle();
+  padding: 1.4rem;
+}
+
+.questions .question-wrapper .question-content p {
+  display: flex;
+  align-items: center;
+  min-height: 5.5rem;
+
+  margin-left: 1.6rem;
+  word-break: break-word; /* palavra muito grande (única palavra sem espaço) não quebra o layout */
+}
+
+.questions .question-wrapper .actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.questions .question-wrapper .actions > a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.questions .question-wrapper .actions > a > img {
+  margin-right: 0.8rem;
+}
+
+.questions .question-wrapper .actions > a + a {
+  /*seleciona o irmã direto do a - poderia ser :nth-child(2) */
+  margin-left: 2.4rem;
+}
+
+/* Question Read */
+
+.questions .question-wrapper.read {
+  background: var(--grey-medium);
+}
+
+.questions .question-wrapper.read .question-content .user {
+  background: var(--grey-blue);
+}
