@@ -65,5 +65,11 @@
 - Inicializar o servidor
 
   ```console
-  npm src/server.js || npm start (configure no package.json o caminho em script para startar o servidor) || nodemon start
+  npm start (configure no package.json o caminho em script para startar o servidor)
   ```
+
+# Aula 05
+
+- Verificar se ID da sala existe
+- Número da sala dinâmico na página de perguntas
+-
