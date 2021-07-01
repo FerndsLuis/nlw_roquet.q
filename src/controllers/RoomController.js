@@ -45,10 +45,24 @@ module.exports = {
       `SELECT * FROM questions WHERE room = ${roomId} AND read = 1`
     );
 
+    let isNoQuestions;
+
+    if (questions.length == 0) {
+      if (questionsRead.length == 0) {
+        isNoQuestions = true;
+      }
+    }
+
     res.render('room', {
       roomId: roomId,
       questions: questions,
       questionsRead: questionsRead,
+      isNoQuestions: isNoQuestions,
     });
+  },
+
+  enter(req, res) {
+    const roomId = req.body.roomId;
+    res.redirect(`/room/${roomId}`);
   },
 };

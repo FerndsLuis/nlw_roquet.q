@@ -1,5 +1,7 @@
 # nlw_roquet.q
 
+**Figma** https://www.figma.com/file/vp3iFfd1ohCbHyDX9jCiQi/Roquet.q-%2302?node-id=159%3A1143
+
 # Aula 01
 
 - Layou global
@@ -72,4 +74,5 @@
 
 - Verificar se ID da sala existe
 - Número da sala dinâmico na página de perguntas
--
+- Excluir e marcar como lidos integrados com banco de dados
+- Página de Nenhuma questão criada
