@@ -1,6 +1,14 @@
 <section>
   <h2>Crie sua própria sala</h2>
   <form action="/create-room" method="POST">
+    <label class="sr-only" for="room-email">Insira seu e-mail</label>
+    <input
+      type="text"
+      name="email"
+      id="room-email"
+      placeholder="Insira seu e-mail"
+    />
+    <div id="msgemail"></div>
     <label class="sr-only" for="room-pass">Insira uma senha</label>
     <input
       type="password"
@@ -8,6 +16,7 @@
       id="room-pass"
       placeholder="Insira uma senha"
     />
+    <div id="msgsenha"></div>
     <button>
       <img src="/images/users-white.svg" alt="Entrar na sala" />
       Cria Sala

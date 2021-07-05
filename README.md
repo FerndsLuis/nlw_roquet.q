@@ -67,6 +67,7 @@
 - Inicializar o servidor
 
   ```console
+  npm run init-db  (Para criar o banco de dados)
   npm start (configure no package.json o caminho em script para startar o servidor)
   ```
 
@@ -76,3 +77,8 @@
 - Número da sala dinâmico na página de perguntas
 - Excluir e marcar como lidos integrados com banco de dados
 - Página de Nenhuma questão criada
+
+# Extra
+
+- Inserir campo e-mail
+- Validar E-mail e Senha no Backend e FrontEnd

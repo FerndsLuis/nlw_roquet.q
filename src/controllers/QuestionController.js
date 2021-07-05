@@ -7,6 +7,7 @@ module.exports = {
     const roomId = req.params.room;
     const questiomId = req.params.question;
     const action = req.params.action;
+    const email = req.body.email;
     const password = req.body.password;
 
     /* Verificar senha passada pelo modal */
@@ -14,7 +15,7 @@ module.exports = {
       `SELECT * FROM rooms where id = ${roomId}`
     );
 
-    if (verifyisRoom.pass == password) {
+    if (verifyisRoom.email == email && verifyisRoom.pass == password) {
       if (action == 'delete') {
         await db.run(`DELETE FROM questions WHERE id = ${questiomId}`);
       } else if (action == 'check') {
@@ -28,6 +29,7 @@ module.exports = {
     console.log(roomId);
     console.log(questiomId);
     console.log(action);
+    console.log(email);
     console.log(password);
   },
 
