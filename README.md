@@ -35,6 +35,7 @@
   npm install nodemon -D
   npm install sqlite
   npm install sqlite3
+  npm install bcrypt
   ```
 
 - Configuração do servirdor em src/server.js
@@ -82,3 +83,4 @@
 
 - Inserir campo e-mail
 - Validar E-mail e Senha no Backend e FrontEnd
+- Criptografar a senha usando SALT (bcrypt)

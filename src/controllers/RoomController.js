@@ -1,4 +1,5 @@
 const Database = require('../db/config');
+const bcrypt = require('bcrypt');
 
 module.exports = {
   async create(req, res) {
@@ -17,6 +18,9 @@ module.exports = {
     //valida a senha
     isPass = pass.length > 3 ? true : false;
 
+    console.log(email);
+    console.log(criptPass(pass));
+
     while (isRoom) {
       /* Gera o número da sala */
       for (var i = 0; i < 6; i++) {
@@ -34,7 +38,7 @@ module.exports = {
         /*Inseri a Sala no Banco com a senha*/
         await db.run(
           `INSERT INTO rooms (id, email, pass) VALUES 
-          (${parseInt(roomId)},'${email}','${pass}');`
+          (${parseInt(roomId)},'${email}','${criptPass(pass)}');`
         );
         await db.close();
         res.redirect(`/room/${roomId}`);
@@ -78,3 +82,9 @@ module.exports = {
     res.redirect(`/room/${roomId}`);
   },
 };
+
+function criptPass(pass) {
+  const salt = bcrypt.genSaltSync(10);
+  const hashPass = bcrypt.hashSync(pass, salt);
+  return hashPass;
+}

@@ -1,4 +1,5 @@
 const Database = require('../db/config');
+const bcrypt = require('bcrypt');
 
 module.exports = {
   async index(req, res) {
@@ -15,7 +16,10 @@ module.exports = {
       `SELECT * FROM rooms where id = ${roomId}`
     );
 
-    if (verifyisRoom.email == email && verifyisRoom.pass == password) {
+    if (
+      verifyisRoom.email == email &&
+      bcrypt.compareSync(password, verifyisRoom.pass)
+    ) {
       if (action == 'delete') {
         await db.run(`DELETE FROM questions WHERE id = ${questiomId}`);
       } else if (action == 'check') {
@@ -30,7 +34,7 @@ module.exports = {
     console.log(questiomId);
     console.log(action);
     console.log(email);
-    console.log(password);
+    console.log(criptPass(password));
   },
 
   async create(req, res) {
@@ -46,3 +50,10 @@ module.exports = {
     res.redirect(`/room/${roomId}`);
   },
 };
+
+//criptografa a senha
+function criptPass(pass) {
+  const salt = bcrypt.genSaltSync(10);
+  const hashPass = bcrypt.hashSync(pass, salt);
+  return hashPass;
+}
