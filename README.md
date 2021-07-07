@@ -1,28 +1,50 @@
-# nlw_roquet.q
+[![last commit](https://img.shields.io/github/last-commit/FerndsLuis/nlw_roquet.q)](https://img.shields.io/github/last-commit/FerndsLuis/nlw_roquet.q)
 
-**Figma** https://www.figma.com/file/vp3iFfd1ohCbHyDX9jCiQi/Roquet.q-%2302?node-id=159%3A1143
+# NLW Roquet.q
 
-# Aula 01
+**Figma:** [LINK](https://www.figma.com/file/vp3iFfd1ohCbHyDX9jCiQi/Roquet.q-%2302?node-id=159%3A1143)
+
+## Objetivos
+
+Projeto desenvolvido durante a semana NLW (06) oferecido pela [Rocketseat](https://github.com/rocketseat-education/nlw-06-discover) na trilha Discover com a excelentíssima professora [Jakeliny Gracielly](https://github.com/jakeliny)
+
+Cada subtitulo a seguir é uma branch no repositório, exceto "Tecnologias"
+
+## Tecnologias
+
+- HTML + CSS (Grid, Flexbox, Definição REM)
+- JAVASCRIPT
+- NODEJS (Express, SQLite, Ejs, Bcrypt)
+
+## Para iniciar o projeto
+
+```console
+  npm install
+  npm run init-db
+  npm start
+```
+
+# Aulas
+
+## Aula 01
 
 - Layou global
 - Página Home
 
-\*\*Skill = HTML + CSS (Grid, Flex-Box, Definição REM)
-
-# Aula 02
+## Aula 02
 
 - Página Create-Pass
 - Página Room
 - Form da página Room com botão imersivo
 - Criação de elementos via CSS (https://bennettfeely.com/clippy/)
 
-# Aula 03
+## Aula 03
 
 - Criação do modal
 - Ajuste no layout de perguntas
 - Ajuste nos botões
 
-# Aula 04
+## Aula 04
 
 - Ajuste do input da página Create-Pass
 - Organização do diretório e conversão de HTML para EJS
@@ -72,14 +94,16 @@
   npm start (configure no package.json o caminho em script para startar o servidor)
   ```
 
-# Aula 05
+## Aula 05
 
 - Verificar se ID da sala existe
 - Número da sala dinâmico na página de perguntas
 - Excluir e marcar como lidos integrados com banco de dados
 - Página de Nenhuma questão criada
 
-# Extra
+## Extra
+
+**Implementações fora do scopo com intenção de aprofundar conhecimento**
 
 - Inserir campo e-mail
 - Validar E-mail e Senha no Backend e FrontEnd

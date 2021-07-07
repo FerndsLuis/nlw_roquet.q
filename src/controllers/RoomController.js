@@ -31,7 +31,6 @@ module.exports = {
 
       /* Verificar se o número da sala já existe */
       const roomsExistIds = await db.all('SELECT id FROM rooms');
-
       isRoom = roomsExistIds.some((roomExistId) => roomExistId === roomId);
 
       if (!isRoom && isEmail && isPass) {
